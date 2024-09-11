@@ -1,0 +1,35 @@
+.main-container {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-bg {
+  width: 100%;
+  height: calc(100dvh - 48px);
+  background-color: #10192d;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-container {
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 24px;
+  max-width: 1280px;
+  width: 100%;
+  height: calc(100dvh - 112px);
+}
+
+.movie-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .movie-container {
+    height: calc(100dvh - 324.8px);
+  }
+}

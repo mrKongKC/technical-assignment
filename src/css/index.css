@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mt-3{
+  margin-top: 8px;
+}
+
+.h-43 {
+  height: 43.2px;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: 2px solid transparent;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.primary-gradient-btn {
+  background-image: linear-gradient(
+    to right,
+    #133fae 0%,
+    #1f53dc 51%,
+    #133fae 100%
+  );
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  display: block;
+  font-weight: 600;
+}
+
+.primary-gradient-btn:hover {
+  background-position: right center;
+  text-decoration: none;
+}
+
+.white-color{
+  color: #ffffff;
+}
