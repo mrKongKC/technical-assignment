@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm install`
 
-For being install node module into the project
+For installation of node module into the project
 
 ### `npm start`
 
