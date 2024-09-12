@@ -35,7 +35,7 @@ const Modal = ({ movie, onClose }) => {
     );
 };
 
-const Movie = ({ showMovies }) => {
+const Movie = ({ showMovies, hasLoading }) => {
     const [selectedMovie, setSelectedMovie] = useState(null);
 
     const handleMovieClick = (movie) => {
@@ -51,7 +51,7 @@ const Movie = ({ showMovies }) => {
                 <Modal movie={selectedMovie} onClose={handleCloseModal} />
             )}
             {
-                showMovies?.length > 0 ? (<div className='grid-container'>
+                (showMovies?.length > 0 && !hasLoading) && (<div className='grid-container'>
                     {showMovies.map((movie) => (
                         <button key={movie.id} className='grid-item border-rotate' onClick={() => handleMovieClick(movie)}>
                             <div className='inner'>
@@ -69,18 +69,19 @@ const Movie = ({ showMovies }) => {
                         </button>
                     ))}
                 </div>)
-                    : (<div>
-                        <div className='img-no-data-container'>
-                            <img src='../no-data.png' alt="no-data" className='img-responsive-no-data' />
-                        </div>
-                        <h2 className='text-center white-color'> No data</h2>
-                    </div>
-                    )
+            }
 
+            {(showMovies?.length === 0 && !hasLoading) && (
+                <div>
+                    <div className='img-no-data-container'>
+                        <img src='../no-data.png' alt="no-data" className='img-responsive-no-data' />
+                    </div>
+                    <h2 className='text-center white-color'> No data</h2>
+                </div>
+            )
             }
 
         </>
-
     );
 };
 
